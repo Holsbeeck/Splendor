@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #CDE4F3;" type="GridPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ButtonBar buttonMinWidth="200.0" buttonOrder="U+" minHeight="25.0" minWidth="200.0">
+        <buttons>
+            <Button fx:id="btnVoegSpelerToe" defaultButton="true" mnemonicParsing="false" onAction="#registreerSpeler" style="-fx-background-color: lightgray;" text="Voeg Toe">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+          <Button fx:id="btnStart" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#startSpel" style="-fx-background-color: green;" text="Start ">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="lblAantalSpelers" alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="27.0" prefWidth="205.0" style="-fx-font-weight: bold;" text="Aantal Spelers: 0/4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnSnelleStart" fx:id="btnSnelleStart" defaultButton="true" mnemonicParsing="false" onAction="#SnelleStart" style="-fx-background-color: purple;" text="Snel Spelen" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="btnAnnuleer" fx:id="btnAnnuleer" cancelButton="true" mnemonicParsing="false" onAction="#showStartScherm" style="-fx-background-color: red;" text="Annuleer">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+        </buttons>
+         <GridPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </GridPane.margin>
+      </ButtonBar>
+      <Label id="lblOutput" fx:id="lblOutput" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="618.0" style="-fx-font-weight: bold;" text="template" textAlignment="CENTER" textFill="#65f539" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </GridPane.margin>
+      </Label>
+      <GridPane GridPane.rowIndex="6">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="316.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1006.0" minWidth="10.0" prefWidth="964.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblSpelers" alignment="CENTER" prefHeight="55.0" prefWidth="316.0" style="-fx-font-weight: bold;" text="Huidige spelers:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSpelerLijst" alignment="CENTER" prefHeight="38.0" prefWidth="968.0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblUser" alignment="CENTER" prefHeight="43.0" prefWidth="470.0" style="-fx-font-weight: bold;" text="Gebruikersnaam" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblBirthYear" alignment="CENTER" prefHeight="89.0" prefWidth="532.0" style="-fx-font-weight: bold;" text="Geboortejaar" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="3">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField id="inpUser" fx:id="inpUser" prefHeight="0.0" prefWidth="1180.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="5">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField id="inpBirthYear" fx:id="inpBirthYear" prefHeight="0.0" prefWidth="1180.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <ImageView fx:id="ivUitroep" fitHeight="181.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.rowIndex="1">
+         <image>
+            <Image url="@images/uitroepteken.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="300.0" />
+         </GridPane.margin>
+      </ImageView>
+   </children>
+</fx:root>

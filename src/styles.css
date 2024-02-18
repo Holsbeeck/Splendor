@@ -1,0 +1,5 @@
+#speelveld
+{
+    -fx-background-image: url("gui/images/tafel.png");
+    -fx-background-size: stretch;
+}
